@@ -34,7 +34,8 @@ async def parse_resume(file: UploadFile = File(...)):
 @router.post("/parse-cv", response_model=ResumeResponse)
 async def parse_cv(file: UploadFile = File(...)):
     """
-    Main endpoint to receive a resume file, run OCR + LLM, and return structured data.
+    Second Main endpoint to receive a resume file, run OCR + LLM, and return structured data.
+    This endpoint is actually using our OCR and not the mocking one.
     """
     try:
         # Validate content type and basic constraints
