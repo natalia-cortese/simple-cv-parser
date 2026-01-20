@@ -1,0 +1,4 @@
+John Doe
+Email: john.doe@email.com
+Python Developer
+Skills: Python, Django, AWS

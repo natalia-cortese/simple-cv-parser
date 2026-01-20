@@ -1,0 +1,22 @@
+fastapi==0.110.0
+uvicorn[standard]==0.27.1
+
+# System dependencies (NOT installable via pip):
+# - poppler (provides `pdfinfo`, required by pdf2image for PDFs)
+# - tesseract (OCR engine used by pytesseract)
+#
+# OCR
+# Use a pytesseract version that no longer relies on pkgutil.find_loader (removed in Python 3.14)
+pytesseract>=0.3.13
+Pillow>=11.0.0
+pdf2image==1.17.0
+
+# Validation & typing
+pydantic>=2.6.1
+
+# Testing
+pytest==8.1.1
+
+# Optional (for future scalability)
+python-multipart>=0.0.9
+httpx>=0.24.1,<0.28.0
