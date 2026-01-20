@@ -32,11 +32,11 @@ LLM prompt → structured JSON
   ↓
 Response
 
-## Requisitos / Setup (importante)
+## Requirements / Setup (Important)
 
-Este proyecto **no es compatible con Python 3.14** todavía (depencias como `pydantic-core` / `Pillow` no tienen wheels estables y pip intenta compilar).
+This project **is not compatible with Python 3.14** yet (dependencies like `pydantic-core` / `Pillow` do not have stable wheels and pip tries to compile them).
 
-- **Python recomendado**: 3.11.x (también debería funcionar 3.12.x)
+- **Recommended Python**: 3.11.x (should also work with 3.12.x)
 - **Mac (Homebrew)**:
 
 ```bash
@@ -56,28 +56,28 @@ source .venv/bin/activate
 uvicorn main:app --reload
 ```
 
-## Qué usa mi solucion?
+## What does my solution use?
 
 🔹 pytesseract
 
-Wrapper de Tesseract OCR.
+Wrapper for Tesseract OCR.
 
-Convierte imágenes → texto
+Converts images → text.
 
-Fácil de mockear
+Easy to mock.
 
-Muy usado en prototipos
+Widely used in prototypes.
 
 🔹 Pillow
 
-Procesamiento de imágenes.
-Necesario para que Tesseract lea JPG/PNG.
+Image processing.
+Necessary for Tesseract to read JPG/PNG files.
 
 🔹 pdf2image
 
-Convierte PDFs a imágenes antes del OCR.
+Converts PDFs to images before OCR.
 
-👉 En producción podría cambiarse por:
+👉 For production, you could replace with:
 
 AWS Textract
 
@@ -85,14 +85,14 @@ GCP Vision
 
 🔹 pydantic
 
-Validación del schema de salida.
-Evita respuestas mal formadas.
+Validates the output schema.
+Prevents badly formed responses.
 
 🔹 python-multipart
 
-Necesario para manejar UploadFile en FastAPI.
+Required to handle UploadFile in FastAPI.
 
 🔹 pytest
 
-Testing básico del endpoint.
-Muestra mentalidad profesional.
+Basic endpoint testing.
+Shows professional mindset.
